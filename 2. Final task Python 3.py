@@ -12,8 +12,8 @@ import pandas as pd
 import datetime as dt
 
 
-l_user = 'Ввести логин'   # Логин удален по причине открытого доступа к проекту.
-l_pass = 'ВВести Пароль' # Пароль удален по причине открытого доступа к проекту.
+l_user = 'Karateev_VG'
+l_pass = 'Zz120975270578'
 l_tns = ora.makedsn('13.95.167.129', 1521, service_name = 'pdb1')
 
 l_conn_ora = adb.create_engine(r'oracle://{p_user}:{p_pass}@{p_tns}'.format(
@@ -45,10 +45,12 @@ l_meta.reflect()
 l_tab4 = l_meta.tables['c_fin_karateev_vg']
 print(l_tab4)
 
+
 c = 0
 
-l_file_excel = pd.read_excel(r'C:\1\Sample - Superstore.xlsx', sheet_name = 'Orders') # Требуется изменить путь к файлу.
+l_file_excel = pd.read_excel(r'C:\1\Sample - Superstore.xlsx', sheet_name = 'Orders')
 l_list = l_file_excel.values.tolist()
+
 for i in l_list:
     c +=1
     print(c)    
