@@ -248,7 +248,7 @@ AS
                 EXECUTE IMMEDIATE 'TRUNCATE TABLE B_fin_Karateev_VG DROP STORAGE';                   -- Очистка перед внесением новых данных таблицы № 4 "FIN"
                 EXECUTE IMMEDIATE 'TRUNCATE TABLE A_basic_shop_Karateev_VG DROP STORAGE';            -- Очистка перед внесением новых данных базовой витрины
                 EXECUTE IMMEDIATE 'TRUNCATE TABLE A_final_1_showcasev_VG DROP STORAGE';-- Очистка перед внесением новых данных итоговой витрины № 1
-                EXECUTE IMMEDIATE 'TRUNCATE TABLE A_final_3_showcasev_VG DROP STORAGE';-- Очистка перед внесением новых данных итоговой витрины № 2
+                EXECUTE IMMEDIATE 'TRUNCATE TABLE A_final_2_showcasev_VG DROP STORAGE';-- Очистка перед внесением новых данных итоговой витрины № 2
                 EXECUTE IMMEDIATE 'TRUNCATE TABLE A_final_3_showcasev_VG DROP STORAGE';-- Очистка перед внесением новых данных итоговой витрины № 3
         --------------------------------------------------------------  
                 OPEN B_Customer_cursor;    -- Вставка данных в таблицу №3 "Customer"
@@ -357,7 +357,7 @@ AS
                 ORDER BY Order_Date, TOTAL DESC;
             COMMIT;
         -------------------------------------------------------------- 
-            EXECUTE IMMEDIATE 'TRUNCATE TABLE C_Customer_Karateev_VG DROP STORAGE';   -- Очистка начальной таблицы "С" № 1 "Customer". Подготовка к следующей загрузке.
+            EXECUTE IMMEDIATE 'TRUNCATE TABLE C_Customer_Karateev_VG DROP STORAGE';          -- Очистка начальной таблицы "С" № 1 "Customer". Подготовка к следующей загрузке.
             EXECUTE IMMEDIATE 'TRUNCATE TABLE C_Product_Karateev_VG DROP STORAGE';           -- Очистка начальной таблицы "С" № 2 "Product". Подготовка к следующей загрузке.
             EXECUTE IMMEDIATE 'TRUNCATE TABLE C_orders_Karateev_VG DROP STORAGE';            -- Очистка начальной таблицы "С" № 3 "Orders". Подготовка к следующей загрузке.
             EXECUTE IMMEDIATE 'TRUNCATE TABLE C_fin_Karateev_VG DROP STORAGE';               -- Очистка начальной таблицы "С" № 4 "FIN". Подготовка к следующей загрузке.
